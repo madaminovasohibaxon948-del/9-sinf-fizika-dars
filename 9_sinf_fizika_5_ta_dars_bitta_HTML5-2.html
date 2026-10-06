@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9-sinf fizika — Molekulyar fizika interaktiv darslar to‘plami</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Segoe UI,Arial,sans-serif;
+  background:linear-gradient(135deg,#eef5ff,#f8fbff);
+  color:#172033;
+}
+header{
+  padding:28px 18px;
+  text-align:center;
+  color:white;
+  background:linear-gradient(135deg,#1e40af,#2563eb,#7c3aed);
+  box-shadow:0 6px 22px #0002;
+}
+header h1{margin:0 0 8px;font-size:clamp(24px,5vw,38px)}
+header p{margin:0;opacity:.95}
+nav{
+  position:sticky;top:0;z-index:20;
+  display:flex;gap:8px;flex-wrap:wrap;justify-content:center;
+  padding:12px;
+  background:#ffffffee;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #dbe4f0;
+}
+nav button{
+  border:0;border-radius:10px;padding:10px 14px;
+  background:#2563eb;color:white;font-weight:700;cursor:pointer;
+}
+nav button:hover{filter:brightness(1.08)}
+nav button.active{background:#7c3aed}
+main{max-width:1250px;margin:auto;padding:18px}
+.lesson{
+  background:white;border-radius:18px;padding:14px;margin:20px 0;
+  box-shadow:0 5px 22px #17203314;
+}
+.lesson>h2{
+  margin:0 0 12px;padding:12px 14px;border-radius:12px;
+  color:#1d4ed8;background:#eff6ff;
+}
+iframe{
+  display:block;width:100%;height:900px;border:0;border-radius:12px;
+  background:white;
+}
+footer{text-align:center;padding:30px;color:#64748b}
+@media(max-width:700px){
+  main{padding:8px}
+  .lesson{padding:8px}
+  iframe{height:1100px}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>📚 9-sinf fizika — Interaktiv darslar</h1>
+  <p>Molekulyar fizika bo‘yicha 5 ta HTML5 material bitta faylda</p>
+</header>
+
+<nav>
+  <button onclick="go(0)" id="btn-0">Molekulyar-kinetik nazariya</button><button onclick="go(1)" id="btn-1">Molekulalarning massasi va o‘lchami</button><button onclick="go(2)" id="btn-2">Temperatura va uni o‘lchash</button><button onclick="go(3)" id="btn-3">Ideal gaz va uning qonunlari</button><button onclick="go(4)" id="btn-4">Modda miqdori va Avogadro doimiysi</button>
+</nav>
+
+<main>
+
+    <section class="lesson" id="lesson-0">
+      <h2>1. Molekulyar-kinetik nazariya</h2>
+      <iframe title="1. Molekulyar-kinetik nazariya" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uz&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;9-sinf fizika — Molekulyar-kinetik nazariya&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;margin:0;background:#eef5ff;color:#17324d}
+header{background:#1769aa;color:white;padding:22px;text-align:center}
+main{max-width:950px;margin:auto;padding:18px}
+section{background:white;border-radius:14px;padding:18px;margin:15px 0;box-shadow:0 3px 12px #0001}
+h2{color:#1769aa}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:#f5f9ff;padding:14px;border-radius:10px}
+canvas{width:100%;height:280px;background:#10263a;border-radius:12px}
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+button,select,input{padding:9px;border-radius:8px;border:1px solid #aac}
+button{background:#1769aa;color:white;cursor:pointer}
+.question{margin:10px 0;padding:10px;background:#f5f9ff;border-radius:8px}
+.correct{color:green;font-weight:bold}.wrong{color:#c00;font-weight:bold}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+&lt;h1&gt;1-§. Modda tuzilishining molekulyar-kinetik nazariyasi&lt;/h1&gt;
+&lt;p&gt;9-sinf fizika • Interaktiv qisqa dars&lt;/p&gt;
+&lt;/header&gt;
+&lt;main&gt;
+
+&lt;section&gt;&lt;h2&gt;🎯 Dars maqsadi&lt;/h2&gt;
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div class=&quot;card&quot;&gt;Moddaning molekulyar tuzilishini tushunish&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;Molekulalarning doimiy va tartibsiz harakatini kuzatish&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;Molekulyar-kinetik nazariyaning 3 qoidasini bilish&lt;/div&gt;
+&lt;/div&gt;&lt;/section&gt;
+
+&lt;section&gt;&lt;h2&gt;1. Moddaning molekulyar tuzilishi&lt;/h2&gt;
+&lt;p&gt;Barcha moddalar juda kichik zarrachalardan — atom va molekulalardan tashkil topgan. &lt;b&gt;Molekula&lt;/b&gt; — moddaning uning asosiy xossalarini saqlab qoluvchi eng kichik zarrachalaridan biridir.&lt;/p&gt;
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;b&gt;Qattiq jism:&lt;/b&gt; zarrachalar zich joylashgan, muvozanat holati atrofida tebranadi.&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;b&gt;Suyuqlik:&lt;/b&gt; zarrachalar yaqin, lekin bir-biriga nisbatan siljiy oladi.&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;b&gt;Gaz:&lt;/b&gt; zarrachalar uzoq va tartibsiz harakat qiladi.&lt;/div&gt;
+&lt;/div&gt;&lt;/section&gt;
+
+&lt;section&gt;&lt;h2&gt;2. Molekulalarning doimiy va tartibsiz harakati&lt;/h2&gt;
+&lt;p&gt;Molekulalar doimo tartibsiz harakatda bo‘ladi. Temperatura oshsa, ularning o‘rtacha kinetik energiyasi va harakat tezligi ortadi.&lt;/p&gt;
+&lt;canvas id=&quot;sim&quot;&gt;&lt;/canvas&gt;
+&lt;div class=&quot;controls&quot;&gt;
+&lt;button onclick=&quot;running=!running&quot;&gt;▶/Ⅱ Play/Pause&lt;/button&gt;
+&lt;button onclick=&quot;reset()&quot;&gt;↻ Reset&lt;/button&gt;
+&lt;label&gt;Holat:
+&lt;select id=&quot;state&quot; onchange=&quot;reset()&quot;&gt;&lt;option value=&quot;solid&quot;&gt;Qattiq&lt;/option&gt;&lt;option value=&quot;liquid&quot;&gt;Suyuq&lt;/option&gt;&lt;option value=&quot;gas&quot;&gt;Gaz&lt;/option&gt;&lt;/select&gt;&lt;/label&gt;
+&lt;label&gt;Temperatura &lt;input id=&quot;temp&quot; type=&quot;range&quot; min=&quot;1&quot; max=&quot;100&quot; value=&quot;50&quot;&gt;&lt;/label&gt;
+&lt;/div&gt;
+&lt;p id=&quot;info&quot;&gt;&lt;/p&gt;&lt;/section&gt;
+
+&lt;section&gt;&lt;h2&gt;3. Molekulyar-kinetik nazariyaning 3 qoidasi&lt;/h2&gt;
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;b&gt;1.&lt;/b&gt; Barcha moddalar juda kichik zarrachalardan tashkil topgan.&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;b&gt;2.&lt;/b&gt; Zarrachalar doimo tartibsiz harakatda bo‘ladi.&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;b&gt;3.&lt;/b&gt; Zarrachalar o‘zaro ta’sirlashadi: tortishish va itarilish mavjud.&lt;/div&gt;
+&lt;/div&gt;&lt;/section&gt;
+
+&lt;section&gt;&lt;h2&gt;🔬 Tajribalar va hodisalar&lt;/h2&gt;
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;b&gt;Diffuziya&lt;/b&gt;&lt;br&gt;Atir hidining xonaga tarqalishi yoki bo‘yoqning suvda yoyilishi zarrachalarning harakatini ko‘rsatadi.&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;b&gt;Broun harakati&lt;/b&gt;&lt;br&gt;Suyuqlik yoki gazdagi juda mayda zarrachalarning tartibsiz harakati molekulalar bilan to‘qnashuvlar natijasidir.&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;b&gt;Gaz bosimi&lt;/b&gt;&lt;br&gt;Gaz molekulalarining idish devoriga urilishi natijasida bosim hosil bo‘ladi.&lt;/div&gt;
+&lt;/div&gt;&lt;/section&gt;
+
+&lt;section&gt;&lt;h2&gt;🧪 Oddiy amaliy tajriba&lt;/h2&gt;
+&lt;p&gt;Ikki stakanga sovuq va iliq suv quying. Har biriga bir tomchi oziq-ovqat bo‘yog‘i qo‘shing. Iliq suvda rang tezroq tarqalishini kuzating.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Xulosa:&lt;/b&gt; temperatura oshishi zarrachalarning tartibsiz harakatini tezlashtiradi.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;&lt;h2&gt;❓ Mustahkamlash savollari&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Modda nimalardan tashkil topgan?&lt;/li&gt;
+&lt;li&gt;Molekulalar qanday harakat qiladi?&lt;/li&gt;
+&lt;li&gt;Temperatura oshganda molekulalar harakati qanday o‘zgaradi?&lt;/li&gt;
+&lt;li&gt;Diffuziya nima?&lt;/li&gt;
+&lt;li&gt;Gaz bosimi qanday hosil bo‘ladi?&lt;/li&gt;
+&lt;/ol&gt;&lt;/section&gt;
+
+&lt;section&gt;&lt;h2&gt;📝 Test&lt;/h2&gt;
+&lt;div id=&quot;tests&quot;&gt;&lt;/div&gt;
+&lt;button onclick=&quot;check()&quot;&gt;Javoblarni tekshirish&lt;/button&gt;
+&lt;p id=&quot;result&quot;&gt;&lt;/p&gt;&lt;/section&gt;
+
+&lt;section&gt;&lt;h2&gt;📌 Bugun nimani o‘rgandik?&lt;/h2&gt;
+&lt;p&gt;Moddalar mayda zarrachalardan tashkil topgan. Zarrachalar doimo tartibsiz harakat qiladi va o‘zaro ta’sirlashadi. Diffuziya, Broun harakati va gaz bosimi molekulyar harakatning tajribaviy dalillaridir.&lt;/p&gt;
+&lt;/section&gt;
+&lt;/main&gt;
+
+&lt;script&gt;
+const c=document.getElementById(&#x27;sim&#x27;),x=c.getContext(&#x27;2d&#x27;);
+let W=900,H=280, p=[],running=true;
+function reset(){
+ c.width=W;c.height=H;p=[];
+ let s=document.getElementById(&#x27;state&#x27;).value,n=s===&#x27;solid&#x27;?55:s===&#x27;liquid&#x27;?50:35;
+ for(let i=0;i&lt;n;i++){
+  let a=Math.random()*Math.PI*2;
+  p.push({x:s===&#x27;solid&#x27;?80+(i%11)*55:Math.random()*W,y:s===&#x27;solid&#x27;?45+Math.floor(i/11)*40:Math.random()*H,
+  vx:Math.cos(a),vy:Math.sin(a)});
+ }
+ draw();
+}
+function draw(){
+ x.clearRect(0,0,W,H);
+ let s=document.getElementById(&#x27;state&#x27;).value,t=+document.getElementById(&#x27;temp&#x27;).value;
+ let speed=.25+t/35;
+ p.forEach((q,i)=&gt;{
+  if(running){
+   if(s===&#x27;solid&#x27;){q.x+=q.vx*speed*.35;q.y+=q.vy*speed*.35;
+    if(q.x&lt;50||q.x&gt;W-50)q.vx*=-1;if(q.y&lt;30||q.y&gt;H-30)q.vy*=-1;}
+   else {q.x+=q.vx*speed;q.y+=q.vy*speed;
+    if(q.x&lt;8||q.x&gt;W-8)q.vx*=-1;if(q.y&lt;8||q.y&gt;H-8)q.vy*=-1;}
+  }
+  x.beginPath();x.arc(q.x,q.y,6,0,7);x.fillStyle=&#x27;#66d9ff&#x27;;x.fill();
+ });
+ document.getElementById(&#x27;info&#x27;).textContent=`Temperatura: ${t}%. Zarrachalar harakati: ${t&gt;65?&#x27;tez&#x27;:&#x27;o‘rtacha&#x27;}.`;
+ requestAnimationFrame(draw);
+}
+const qs=[
+[&#x27;Modda nimadan tashkil topgan?&#x27;,[&#x27;Molekulalardan&#x27;,&#x27;Faqat suvdan&#x27;,&#x27;Faqat havodan&#x27;,&#x27;Issiqlikdan&#x27;],0],
+[&#x27;Temperatura oshsa molekulalar harakati qanday bo‘ladi?&#x27;,[&#x27;Sekinlashadi&#x27;,&#x27;Tezlashadi&#x27;,&#x27;To‘xtaydi&#x27;,&#x27;O‘zgarmaydi&#x27;],1],
+[&#x27;Diffuziya nimani ko‘rsatadi?&#x27;,[&#x27;Zarrachalar harakatini&#x27;,&#x27;Jism massasini&#x27;,&#x27;Rangni&#x27;,&#x27;Og‘irlikni&#x27;],0],
+[&#x27;Gaz bosimi nimadan hosil bo‘ladi?&#x27;,[&#x27;Molekulalarning devorga urilishidan&#x27;,&#x27;Yorug‘likdan&#x27;,&#x27;Rangdan&#x27;,&#x27;Suvdan&#x27;],0],
+[&#x27;Molekulyar-kinetik nazariyada nechta asosiy qoida bor?&#x27;,[&#x27;1&#x27;,&#x27;2&#x27;,&#x27;3&#x27;,&#x27;5&#x27;],2]
+];
+document.getElementById(&#x27;tests&#x27;).innerHTML=qs.map((q,i)=&gt;`&lt;div class=&quot;question&quot;&gt;&lt;b&gt;${i+1}. ${q[0]}&lt;/b&gt;&lt;br&gt;`+
+q[1].map((a,j)=&gt;`&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;q${i}&quot; value=&quot;${j}&quot;&gt; ${a}&lt;/label&gt;&lt;br&gt;`).join(&#x27;&#x27;)+&#x27;&lt;/div&gt;&#x27;).join(&#x27;&#x27;);
+function check(){
+ let n=0;qs.forEach((q,i)=&gt;{let a=document.querySelector(`input[name=q${i}]:checked`);if(a&amp;&amp;+a.value===q[2])n++});
+ document.getElementById(&#x27;result&#x27;).innerHTML=`Natija: &lt;b&gt;${n}/5&lt;/b&gt;`;
+}
+reset();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;"></iframe>
+    </section>
+    <section class="lesson" id="lesson-1">
+      <h2>2. Molekulalarning massasi va o‘lchami</h2>
+      <iframe title="2. Molekulalarning massasi va o‘lchami" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uz&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;9-Sinf Fizika: 2-Mavzu (Mukammal Nashr)&lt;/title&gt;
+    &lt;style&gt;
+        :root {
+            --primary: #2563eb;
+            --secondary: #0f172a;
+            --success: #16a34a;
+            --danger: #dc2626;
+            --bg: #f8fafc;
+        }
+
+        body {
+            font-family: &#x27;Segoe UI&#x27;, Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--secondary);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e40af, #2563eb);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--primary);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        #zoom-container {
+            text-align: center;
+            background: #111827;
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .zoom-view {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .scale-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .balance-beam {
+            width: 200px;
+            height: 10px;
+            background: #64748b;
+            position: relative;
+            transition: transform 0.5s ease;
+        }
+
+        .quiz-option {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            background: #f1f5f9;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .quiz-option:hover {
+            background: #e2e8f0;
+        }
+
+        .correct { background-color: #d1fae5 !important; border-color: #34d399 !important; }
+        .wrong { background-color: #fee2e2 !important; border-color: #f87171 !important; }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover { background: #1d4ed8; }
+
+        input[type=&quot;number&quot;], select {
+            padding: 8px;
+            border: 2px solid #cbd5e1;
+            border-radius: 6px;
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header&gt;
+    &lt;h1&gt;2-Mavzu: Molekulalarning massasi va o&#x27;lchami&lt;/h1&gt;
+    &lt;p&gt;9-sinf Fizika fani bo&#x27;yicha interaktiv mukammal raqamli darslik&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+
+    &lt;div class=&quot;card&quot;&gt;
+        &lt;h2&gt;1. Molekulalar va ularning o&#x27;lchami&lt;/h2&gt;
+        &lt;p&gt;Molekulalar nihoyatda kichik zarrachalardir. Ularning o&#x27;lchami o&#x27;rtacha &lt;b&gt;10&lt;sup&gt;-10&lt;/sup&gt; metr&lt;/b&gt; (1 angstrem) atrofida bo&#x27;ladi. Quyidagi slayderni o&#x27;ngga surib, makrodunyodan mikrodunyoga sayohat qiling:&lt;/p&gt;
+        
+        &lt;div id=&quot;zoom-container&quot;&gt;
+            &lt;input type=&quot;range&quot; id=&quot;zoom-range&quot; min=&quot;1&quot; max=&quot;100&quot; value=&quot;1&quot; style=&quot;width: 80%;&quot;&gt;
+            &lt;div id=&quot;zoom-label&quot;&gt;Hozirgi ko&#x27;rinish: Oddiy suv tomchisi (Makrodunyo)&lt;/div&gt;
+            &lt;div class=&quot;zoom-view&quot;&gt;
+                &lt;div id=&quot;visual-object&quot; style=&quot;width: 150px; height: 150px; background: #3b82f6; border-radius: 50%;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;card&quot;&gt;
+        &lt;h2&gt;2. Molekulalarning massasi (Laboratoriya)&lt;/h2&gt;
+        &lt;p&gt;Molekulalar o&#x27;ta kichik bo&#x27;lgani uchun ularning absolyut massasi ham juda kichik (masalan, suv molekulasi ≈ 3·10&lt;sup&gt;-26&lt;/sup&gt; kg). Virtual tarozida moddalarni tanlab tortib ko&#x27;ring:&lt;/p&gt;
+        
+        &lt;div style=&quot;margin-bottom: 15px;&quot;&gt;
+            &lt;label&gt;Moddani tanlang: &lt;/label&gt;
+            &lt;select id=&quot;substance-select&quot;&gt;
+                &lt;option value=&quot;water&quot;&gt;Suv molekulasi (H₂O)&lt;/option&gt;
+                &lt;option value=&quot;oxygen&quot;&gt;Kislorod molekulasi (O₂)&lt;/option&gt;
+                &lt;option value=&quot;hydrogen&quot;&gt;Vodorod atomi (H)&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;scale-container&quot;&gt;
+            &lt;div&gt;⚖️ Virtual Tarozi&lt;/div&gt;
+            &lt;div id=&quot;scale-beam&quot; class=&quot;balance-beam&quot;&gt;&lt;/div&gt;
+            &lt;div id=&quot;mass-result&quot;&gt;Absolyut massa: &lt;b&gt;2.99 × 10&lt;sup&gt;-26&lt;/sup&gt; kg&lt;/b&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;card&quot;&gt;
+        &lt;h2&gt;3. Nisbiy molekulyar massa va amaliy topshiriq&lt;/h2&gt;
+        &lt;p&gt;Nisbiy molekulyar massa (M&lt;sub&gt;r&lt;/sub&gt;) — modda molekulasi massasining uglerod atomi massasi 1/12 qismiga nisbatidir. Quyidagi kalkulyatorda modda miqdoriga ko&#x27;ra molekulalar sonini hisoblang:&lt;/p&gt;
+        
+        &lt;div style=&quot;background: #f8fafc; padding: 15px; border-radius: 6px;&quot;&gt;
+            &lt;h4&gt;Formulalarni amalda tekshirish:&lt;/h4&gt;
+            &lt;input type=&quot;number&quot; id=&quot;moles-input&quot; placeholder=&quot;Modda miqdori (mol)&quot; value=&quot;1&quot; min=&quot;0&quot;&gt; mol
+            &lt;button class=&quot;btn&quot; onclick=&quot;calculateParticles()&quot;&gt;Hisoblash&lt;/button&gt;
+            &lt;p id=&quot;calc-result&quot; style=&quot;margin-top: 15px; font-weight: bold; color: var(--success);&quot;&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;card&quot;&gt;
+        &lt;h2&gt;🧠 Bilimni tekshirish (Interaktiv Test)&lt;/h2&gt;
+        &lt;p&gt;Mavzuni qanchalik yaxshi o&#x27;zlashtirganingizni tekshirib ko&#x27;ring. To&#x27;g&#x27;ri javobni bosing:&lt;/p&gt;
+        
+        &lt;div id=&quot;quiz-block&quot;&gt;
+            &lt;h4 id=&quot;question-text&quot;&gt;Savol: Molekulalarning o&#x27;rtacha o&#x27;lchami qanchaga teng?&lt;/h4&gt;
+            &lt;button class=&quot;quiz-option&quot; onclick=&quot;checkAnswer(this, false)&quot;&gt;A) 10&lt;sup&gt;-5&lt;/sup&gt; metr&lt;/button&gt;
+            &lt;button class=&quot;quiz-option&quot; onclick=&quot;checkAnswer(this, true)&quot;&gt;B) 10&lt;sup&gt;-10&lt;/sup&gt; metr&lt;/button&gt;
+            &lt;button class=&quot;quiz-option&quot; onclick=&quot;checkAnswer(this, false)&quot;&gt;C) 10&lt;sup&gt;-20&lt;/sup&gt; metr&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;p id=&quot;quiz-feedback&quot; style=&quot;font-weight: bold; margin-top: 10px;&quot;&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;card&quot; style=&quot;border-left-color: #eab308;&quot;&gt;
+        &lt;h2&gt;🏠 Uyga vazifa va Mustaqil ish&lt;/h2&gt;
+        &lt;p&gt;Quyidagi topshiriqni daftaringizga bajaring va yakuniy sonli javobni tekshirish uchun bosing:&lt;/p&gt;
+        &lt;div style=&quot;background: #fef08a; padding: 15px; border-radius: 8px; color: #854d0e;&quot;&gt;
+            &lt;b&gt;Masala:&lt;/b&gt; 36 gramm suvda (H₂O) qancha molekula bor? (Suvning molyar massasi M = 18 g/mol).
+        &lt;/div&gt;
+        &lt;p style=&quot;margin-top: 15px;&quot;&gt;
+            Siz topgan javob (N × 10&lt;sup&gt;23&lt;/sup&gt; dona): 
+            &lt;input type=&quot;number&quot; id=&quot;homework-input&quot; placeholder=&quot;Masalan: 12&quot;&gt; × 10&lt;sup&gt;23&lt;/sup&gt;
+            &lt;button class=&quot;btn&quot; style=&quot;background: #eab308; color: black;&quot; onclick=&quot;checkHomework()&quot;&gt;Tekshirish&lt;/button&gt;
+        &lt;/p&gt;
+        &lt;p id=&quot;homework-feedback&quot; style=&quot;font-weight: bold;&quot;&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+    const slider = document.getElementById(&#x27;zoom-range&#x27;);
+    const label = document.getElementById(&#x27;zoom-label&#x27;);
+    const obj = document.getElementById(&#x27;visual-object&#x27;);
+
+    slider.addEventListener(&#x27;input&#x27;, (e) =&gt; {
+        let val = e.target.value;
+        if(val &lt; 40) {
+            label.innerText = &quot;Hozirgi ko&#x27;rinish: Oddiy suv tomchisi (Makrodunyo)&quot;;
+            obj.style.borderRadius = &quot;50%&quot;;
+            obj.style.background = &quot;#3b82f6&quot;;
+            obj.style.transform = `scale(${1 - val/100})`;
+        } else if (val &gt;= 40 &amp;&amp; val &lt; 80) {
+            label.innerText = &quot;Yaqinlashmoqda: Mikroskopik mikro-tomchi&quot;;
+            obj.style.background = &quot;#60a5fa&quot;;
+            obj.style.borderRadius = &quot;40%&quot;;
+        } else {
+            label.innerText = &quot;Mikrodunyo: Suv (H₂O) molekulasi shakllandi! (10⁻¹⁰ m)&quot;;
+            obj.style.background = &quot;#ef4444&quot;;
+            obj.style.borderRadius = &quot;50px&quot;;
+            obj.style.boxShadow = &quot;0 0 20px rgba(239,68,68,0.8)&quot;;
+        }
+    });
+
+    const select = document.getElementById(&#x27;substance-select&#x27;);
+    const beam = document.getElementById(&#x27;scale-beam&#x27;);
+    const massRes = document.getElementById(&#x27;mass-result&#x27;);
+
+    select.addEventListener(&#x27;change&#x27;, (e) =&gt; {
+        let val = e.target.value;
+        if(val === &#x27;water&#x27;) {
+            beam.style.transform = &quot;rotate(3deg)&quot;;
+            massRes.innerHTML = &quot;Absolyut massa: &lt;b&gt;2.99 × 10&lt;sup&gt;-26&lt;/sup&gt; kg&lt;/b&gt; | Nisbiy massa: 18 a.m.b&quot;;
+        } else if(val === &#x27;oxygen&#x27;) {
+            beam.style.transform = &quot;rotate(7deg)&quot;;
+            massRes.innerHTML = &quot;Absolyut massa: &lt;b&gt;5.31 × 10&lt;sup&gt;-26&lt;/sup&gt; kg&lt;/b&gt; | Nisbiy massa: 32 a.m.b&quot;;
+        } else {
+            beam.style.transform = &quot;rotate(-5deg)&quot;;
+            massRes.innerHTML = &quot;Absolyut massa: &lt;b&gt;1.67 × 10&lt;sup&gt;-27&lt;/sup&gt; kg&lt;/b&gt; | Nisbiy massa: 1 a.m.b&quot;;
+        }
+    });
+
+    function calculateParticles() {
+        let moles = document.getElementById(&#x27;moles-input&#x27;).value;
+        let Na = 6.02;
+        let result = moles * Na;
+        document.getElementById(&#x27;calc-result&#x27;).innerText = `Javob: Kiritilgan modda miqdorida jami ${result.toFixed(2)} × 10²³ dona molekula mavjud!`;
+    }
+
+    function checkAnswer(button, isCorrect) {
+        let options = document.querySelectorAll(&#x27;.quiz-option&#x27;);
+        options.forEach(opt =&gt; opt.disabled = true);
+
+        if(isCorrect) {
+            button.classList.add(&#x27;correct&#x27;);
+            document.getElementById(&#x27;quiz-feedback&#x27;).innerText = &quot;🎉 To&#x27;g&#x27;ri! Barakalla. Molekulalar aynan 10⁻¹⁰ metr tartibiga ega.&quot;;
+            document.getElementById(&#x27;quiz-feedback&#x27;).style.color = &quot;var(--success)&quot;;
+        } else {
+            button.classList.add(&#x27;wrong&#x27;);
+            document.getElementById(&#x27;quiz-feedback&#x27;).innerText = &quot;❌ Noto&#x27;g&#x27;ri. Mavzuni qayta o&#x27;qib ko&#x27;ring.&quot;;
+            document.getElementById(&#x27;quiz-feedback&#x27;).style.color = &quot;var(--danger)&quot;;
+        }
+    }
+
+    function checkHomework() {
+        let userAns = document.getElementById(&#x27;homework-input&#x27;).value;
+        let feedback = document.getElementById(&#x27;homework-feedback&#x27;);
+        if(userAns == 12 || userAns == 12.04) {
+            feedback.innerText = &quot;⭐ Ajoyib! Javobingiz mutloqo to&#x27;g&#x27;ri (12 × 10²³ dona).&quot;;
+            feedback.style.color = &quot;var(--success)&quot;;
+        } else {
+            feedback.innerText = &quot;⚠️ Noto&#x27;g&#x27;ri. Yordam: Dastlab n = m/M dan modda miqdorini toping, keyin uni Avogadro soniga ko&#x27;paytiring.&quot;;
+            feedback.style.color = &quot;var(--danger)&quot;;
+        }
+    }
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;"></iframe>
+    </section>
+    <section class="lesson" id="lesson-2">
+      <h2>3. Temperatura va uni o‘lchash</h2>
+      <iframe title="3. Temperatura va uni o‘lchash" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uz&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;9-sinf Fizika — Temperatura va uni o‘lchash&lt;/title&gt;
+&lt;style&gt;
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#eef5ff;color:#14213d}
+header{padding:22px 16px;text-align:center;background:linear-gradient(135deg,#244c9b,#5b8def);color:white}
+h1{margin:0 0 8px;font-size:30px}.sub{margin:0;font-size:16px}
+nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:12px;background:white;position:sticky;top:0;z-index:5}
+nav button,.btn{border:0;border-radius:10px;padding:10px 14px;background:#244c9b;color:white;cursor:pointer;font-weight:600}
+nav button:hover,.btn:hover{filter:brightness(1.1)}
+main{max-width:1100px;margin:auto;padding:18px}.card{background:white;border-radius:18px;padding:20px;margin:16px 0;box-shadow:0 5px 18px #00000012}
+h2{color:#244c9b;margin-top:0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+canvas{width:100%;height:260px;border-radius:14px;background:#0e1830;display:block}
+.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:12px 0}
+input[type=range]{width:min(500px,100%)}.value{font-size:22px;font-weight:bold}
+.thermo{height:270px;display:flex;justify-content:center;align-items:center;background:#f4f7fc;border-radius:15px;position:relative}
+.tube{width:24px;height:190px;border:4px solid #27364d;border-radius:15px 15px 12px 12px;position:relative;background:#fff;overflow:hidden}
+.mercury{position:absolute;bottom:0;left:0;width:100%;background:#e84c4c;height:50%}
+.bulb{position:absolute;width:48px;height:48px;border-radius:50%;background:#e84c4c;border:4px solid #27364d;bottom:25px}
+.scale{position:absolute;left:calc(50% + 35px);height:190px;display:flex;flex-direction:column;justify-content:space-between;font-size:12px}
+.formula{font-size:20px;background:#f0f5ff;padding:14px;border-radius:12px;text-align:center}
+.quiz{border:1px solid #d9e3f5;border-radius:12px;padding:14px;margin:10px 0}.quiz button{margin:5px;padding:9px 12px;border-radius:8px;border:1px solid #b9c8e5;background:white;cursor:pointer}
+.feedback{font-weight:bold;margin-top:6px}.ok{color:#16803c}.bad{color:#b42318}
+.hidden{display:none}.note{background:#fff8db;padding:12px;border-left:5px solid #e3b341;border-radius:8px}
+footer{text-align:center;padding:25px;color:#516079}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+&lt;h1&gt;🌡️ Temperatura va uni o‘lchash&lt;/h1&gt;
+&lt;p class=&quot;sub&quot;&gt;9-sinf fizika • Interaktiv animatsiyalar va simulyatsiyalar&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+&lt;button onclick=&quot;show(&#x27;intro&#x27;)&quot;&gt;Temperatura&lt;/button&gt;
+&lt;button onclick=&quot;show(&#x27;particles&#x27;)&quot;&gt;Zarrachalar&lt;/button&gt;
+&lt;button onclick=&quot;show(&#x27;thermo&#x27;)&quot;&gt;Termometr&lt;/button&gt;
+&lt;button onclick=&quot;show(&#x27;scale&#x27;)&quot;&gt;Shkalalar&lt;/button&gt;
+&lt;button onclick=&quot;show(&#x27;heat&#x27;)&quot;&gt;Qizish/Sovish&lt;/button&gt;
+&lt;button onclick=&quot;show(&#x27;quiz&#x27;)&quot;&gt;Mini-test&lt;/button&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+&lt;section id=&quot;plan&quot; class=&quot;card&quot;&gt;
+&lt;h2&gt;📚 Dars rejasi&lt;/h2&gt;
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;1-reja. Temperatura tushunchasi&lt;/h3&gt;&lt;p&gt;Temperatura nima? Molekulalarning tartibsiz harakati va temperatura bilan zarrachalar harakati orasidagi bog‘lanishni animatsiya orqali o‘rganish.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;2-reja. Temperaturani o‘lchash&lt;/h3&gt;&lt;p&gt;Termometrning ishlash prinsipi, termometr shkalasi hamda Selsiy, Kelvin va Farengeyt shkalalarini interaktiv simulyatsiya yordamida o‘rganish.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;3-reja. Qizish va sovish jarayonlari&lt;/h3&gt;&lt;p&gt;Jismlarning qizishi va sovishi, issiqlik almashinuvi hamda temperatura o‘zgarishini grafik va animatsiya orqali kuzatish.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;note&quot;&gt;&lt;b&gt;Dars maqsadi:&lt;/b&gt; temperatura tushunchasi, uni o‘lchash usullari va temperatura o‘zgarishlarini interaktiv simulyatsiyalar yordamida tushuntirish.&lt;/div&gt;
+&lt;/section&gt;
+&lt;section id=&quot;intro&quot; class=&quot;card&quot;&gt;
+&lt;h2&gt;1. Temperatura nima?&lt;/h2&gt;
+&lt;p&gt;&lt;b&gt;Temperatura&lt;/b&gt; — jismning qanchalik issiq yoki sovuqligini tavsiflovchi fizik kattalik. Modda zarrachalari doimo tartibsiz harakatda bo‘ladi.&lt;/p&gt;
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div&gt;&lt;canvas id=&quot;introCanvas&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;p&gt;🔵 &lt;b&gt;Past temperatura:&lt;/b&gt; zarrachalar sekinroq harakat qiladi.&lt;/p&gt;
+&lt;p&gt;🔴 &lt;b&gt;Yuqori temperatura:&lt;/b&gt; zarrachalar tezroq harakat qiladi.&lt;/p&gt;
+&lt;div class=&quot;note&quot;&gt;Simulyatsiyada temperaturani o‘zgartirib, zarrachalar tezligidagi farqni kuzating.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;particles&quot; class=&quot;card hidden&quot;&gt;
+&lt;h2&gt;2. Temperatura va molekulalar harakati&lt;/h2&gt;
+&lt;p&gt;Idish ichidagi gaz zarrachalarining tartibsiz harakatini kuzating.&lt;/p&gt;
+&lt;div class=&quot;controls&quot;&gt;
+&lt;button class=&quot;btn&quot; onclick=&quot;changeT(10)&quot;&gt;➕ Temperaturani oshirish&lt;/button&gt;
+&lt;button class=&quot;btn&quot; onclick=&quot;changeT(-10)&quot;&gt;➖ Temperaturani kamaytirish&lt;/button&gt;
+&lt;button class=&quot;btn&quot; onclick=&quot;pTemp=20&quot;&gt;↺ 20°C ga qaytarish&lt;/button&gt;
+&lt;span class=&quot;value&quot; id=&quot;pVal&quot;&gt;20°C&lt;/span&gt;
+&lt;/div&gt;
+&lt;canvas id=&quot;particlesCanvas&quot;&gt;&lt;/canvas&gt;
+&lt;p id=&quot;particleText&quot;&gt;&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;thermo&quot; class=&quot;card hidden&quot;&gt;
+&lt;h2&gt;3. Termometr&lt;/h2&gt;
+&lt;p&gt;Termometr temperaturani o‘lchaydi. Suyuqlikli termometrda qizish natijasida suyuqlik hajmi ortadi va naychada yuqoriga ko‘tariladi.&lt;/p&gt;
+&lt;div class=&quot;controls&quot;&gt;
+&lt;label&gt;🌡️ Suyuqlik temperaturasi:
+&lt;input id=&quot;thermoRange&quot; type=&quot;range&quot; min=&quot;-20&quot; max=&quot;120&quot; value=&quot;20&quot; oninput=&quot;updateThermo()&quot;&gt;&lt;/label&gt;
+&lt;span class=&quot;value&quot; id=&quot;thermoVal&quot;&gt;20°C&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;thermo&quot;&gt;
+&lt;div class=&quot;tube&quot;&gt;&lt;div class=&quot;mercury&quot; id=&quot;mercury&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;bulb&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;scale&quot;&gt;&lt;span&gt;120°C&lt;/span&gt;&lt;span&gt;100°C&lt;/span&gt;&lt;span&gt;80°C&lt;/span&gt;&lt;span&gt;60°C&lt;/span&gt;&lt;span&gt;40°C&lt;/span&gt;&lt;span&gt;20°C&lt;/span&gt;&lt;span&gt;0°C&lt;/span&gt;&lt;span&gt;-20°C&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;b&gt;Vazifa:&lt;/b&gt; slayder yordamida 0°C, 20°C, 50°C va 100°C qiymatlarini toping.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;scale&quot; class=&quot;card hidden&quot;&gt;
+&lt;h2&gt;4. Temperatura shkalalari&lt;/h2&gt;
+&lt;div class=&quot;formula&quot;&gt;K = t(°C) + 273 &amp;nbsp;&amp;nbsp; | &amp;nbsp;&amp;nbsp; °F = 9/5 · °C + 32&lt;/div&gt;
+&lt;div class=&quot;controls&quot;&gt;
+&lt;label&gt;Selsiy:
+&lt;input id=&quot;cRange&quot; type=&quot;range&quot; min=&quot;-50&quot; max=&quot;150&quot; value=&quot;20&quot; oninput=&quot;convert()&quot;&gt;&lt;/label&gt;
+&lt;span class=&quot;value&quot; id=&quot;cVal&quot;&gt;20°C&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Selsiy&lt;/h3&gt;&lt;div class=&quot;value&quot; id=&quot;cOut&quot;&gt;20°C&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Kelvin&lt;/h3&gt;&lt;div class=&quot;value&quot; id=&quot;kOut&quot;&gt;293 K&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Farengeyt&lt;/h3&gt;&lt;div class=&quot;value&quot; id=&quot;fOut&quot;&gt;68°F&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;note&quot;&gt;&lt;b&gt;Misol:&lt;/b&gt; 20°C = 293 K.&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;heat&quot; class=&quot;card hidden&quot;&gt;
+&lt;h2&gt;5. Qizish va sovish simulyatsiyasi&lt;/h2&gt;
+&lt;p&gt;Issiq suv xona haroratiga yaqinlashib soviydi, sovuq suv esa xona haroratiga yaqinlashib isiydi.&lt;/p&gt;
+&lt;div class=&quot;controls&quot;&gt;
+&lt;button class=&quot;btn&quot; onclick=&quot;resetHeat()&quot;&gt;▶ Qayta boshlash&lt;/button&gt;
+&lt;span class=&quot;value&quot; id=&quot;timeVal&quot;&gt;0 s&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;🔥 Issiq suv&lt;/h3&gt;&lt;div class=&quot;value&quot; id=&quot;hotVal&quot;&gt;90°C&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;❄️ Sovuq suv&lt;/h3&gt;&lt;div class=&quot;value&quot; id=&quot;coldVal&quot;&gt;5°C&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;canvas id=&quot;heatCanvas&quot;&gt;&lt;/canvas&gt;
+&lt;p&gt;Grafikda temperaturaning vaqt o‘tishi bilan xona temperaturasi tomon o‘zgarishi ko‘rsatiladi.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;quiz&quot; class=&quot;card hidden&quot;&gt;
+&lt;h2&gt;6. Mini-test&lt;/h2&gt;
+&lt;div id=&quot;quizBox&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;value&quot; id=&quot;score&quot;&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;9-sinf fizika • Temperatura va uni o‘lchash • Interaktiv dars materiali&lt;/footer&gt;
+
+&lt;script&gt;
+function show(id){document.querySelectorAll(&#x27;main section&#x27;).forEach(s=&gt;s.classList.add(&#x27;hidden&#x27;));document.getElementById(id).classList.remove(&#x27;hidden&#x27;)}
+const intro=document.getElementById(&#x27;introCanvas&#x27;), ic=intro.getContext(&#x27;2d&#x27;);
+let balls=[]; for(let i=0;i&lt;28;i++)balls.push({x:Math.random()*intro.width,y:Math.random()*intro.height,vx:(Math.random()-.5)*2,vy:(Math.random()-.5)*2});
+function drawIntro(){ic.clearRect(0,0,intro.width,intro.height);balls.forEach(b=&gt;{b.x=(b.x+b.vx+intro.width)%intro.width;b.y=(b.y+b.vy+intro.height)%intro.height;ic.beginPath();ic.arc(b.x,b.y,6,0,7);ic.fillStyle=&#x27;#70a1ff&#x27;;ic.fill()});requestAnimationFrame(drawIntro)}drawIntro();
+
+const pc=document.getElementById(&#x27;particlesCanvas&#x27;), ctx=pc.getContext(&#x27;2d&#x27;); let pTemp=20;
+let ps=[];for(let i=0;i&lt;45;i++)ps.push({x:Math.random()*pc.width,y:Math.random()*pc.height,vx:Math.random()-.5,vy:Math.random()-.5});
+function changeT(d){pTemp=Math.max(-50,Math.min(150,pTemp+d))}
+function drawParticles(){ctx.clearRect(0,0,pc.width,pc.height);let speed=.4+(pTemp+50)/100;
+ps.forEach(p=&gt;{let m=Math.hypot(p.vx,p.vy)||1;p.vx=p.vx/m*speed;p.vy=p.vy/m*speed;p.x+=p.vx;p.y+=p.vy;if(p.x&lt;5||p.x&gt;pc.width-5)p.vx*=-1;if(p.y&lt;5||p.y&gt;pc.height-5)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,5,0,7);ctx.fillStyle=pTemp&gt;70?&#x27;#ff5a5f&#x27;:pTemp&lt;10?&#x27;#58a6ff&#x27;:&#x27;#ffd166&#x27;;ctx.fill()});
+document.getElementById(&#x27;pVal&#x27;).textContent=pTemp+&#x27;°C&#x27;;
+document.getElementById(&#x27;particleText&#x27;).textContent=pTemp&gt;60?&#x27;Temperatura yuqori: zarrachalar tezroq harakat qilmoqda.&#x27;:pTemp&lt;10?&#x27;Temperatura past: zarrachalar sekinroq harakat qilmoqda.&#x27;:&#x27;O‘rtacha temperatura: zarrachalar harakati o‘rtacha tezlikda.&#x27;;
+requestAnimationFrame(drawParticles)}drawParticles();
+
+function updateThermo(){let t=+document.getElementById(&#x27;thermoRange&#x27;).value;document.getElementById(&#x27;thermoVal&#x27;).textContent=t+&#x27;°C&#x27;;document.getElementById(&#x27;mercury&#x27;).style.height=Math.max(3,((t+20)/140)*100)+&#x27;%&#x27;}
+function convert(){let c=+document.getElementById(&#x27;cRange&#x27;).value;document.getElementById(&#x27;cVal&#x27;).textContent=c+&#x27;°C&#x27;;document.getElementById(&#x27;cOut&#x27;).textContent=c+&#x27;°C&#x27;;document.getElementById(&#x27;kOut&#x27;).textContent=(c+273)+&#x27; K&#x27;;document.getElementById(&#x27;fOut&#x27;).textContent=((9*c/5)+32).toFixed(1)+&#x27;°F&#x27;}
+let hot=90,cold=5,time=0,heatTimer=null,history=[];
+function resetHeat(){hot=90;cold=5;time=0;history=[];clearInterval(heatTimer);heatTimer=setInterval(()=&gt;{hot-=.7; cold+=.45;time++;history.push([hot,cold]);document.getElementById(&#x27;hotVal&#x27;).textContent=hot.toFixed(1)+&#x27;°C&#x27;;document.getElementById(&#x27;coldVal&#x27;).textContent=cold.toFixed(1)+&#x27;°C&#x27;;document.getElementById(&#x27;timeVal&#x27;).textContent=time+&#x27; s&#x27;;drawHeat();if(time&gt;=90)clearInterval(heatTimer)},100)}
+const hc=document.getElementById(&#x27;heatCanvas&#x27;),hh=hc.getContext(&#x27;2d&#x27;);
+function drawHeat(){hh.clearRect(0,0,hc.width,hc.height);hh.strokeStyle=&#x27;#b9c8e5&#x27;;hh.beginPath();hh.moveTo(45,20);hh.lineTo(45,hc.height-35);hh.lineTo(hc.width-20,hc.height-35);hh.stroke();if(history.length&lt;2)return;function line(index){hh.beginPath();history.forEach((v,i)=&gt;{let x=45+i*(hc.width-70)/90,y=20+(120-v[index])*1.5;if(i===0)hh.moveTo(x,y);else hh.lineTo(x,y)});hh.stroke()}line(0);line(1)}
+const qs=[
+[&#x27;Temperatura nimani ifodalaydi?&#x27;,[&#x27;Jismning issiq-sovuqlik holatini&#x27;,&#x27;Jism massasini&#x27;,&#x27;Jism hajmini&#x27;,&#x27;Vaqtni&#x27;],0],
+[&#x27;Temperaturani o‘lchash asbobi nima?&#x27;,[&#x27;Barometr&#x27;,&#x27;Termometr&#x27;,&#x27;Ampermetr&#x27;,&#x27;Dinamometr&#x27;],1],
+[&#x27;0°C necha Kelvin?&#x27;,[&#x27;0 K&#x27;,&#x27;100 K&#x27;,&#x27;273 K&#x27;,&#x27;373 K&#x27;],2],
+[&#x27;100°C necha Kelvin?&#x27;,[&#x27;173 K&#x27;,&#x27;273 K&#x27;,&#x27;373 K&#x27;,&#x27;473 K&#x27;],2],
+[&#x27;Temperatura oshganda molekulalar harakati qanday o‘zgaradi?&#x27;,[&#x27;Sekinlashadi&#x27;,&#x27;Tezlashadi&#x27;,&#x27;To‘xtaydi&#x27;,&#x27;O‘zgarmaydi&#x27;],1]
+];
+let answered=0,score=0;const qb=document.getElementById(&#x27;quizBox&#x27;);
+qs.forEach((q,qi)=&gt;{let d=document.createElement(&#x27;div&#x27;);d.className=&#x27;quiz&#x27;;d.innerHTML=&#x27;&lt;b&gt;&#x27;+(qi+1)+&#x27;. &#x27;+q[0]+&#x27;&lt;/b&gt;&#x27;;q[1].forEach((a,ai)=&gt;{let b=document.createElement(&#x27;button&#x27;);b.textContent=a;b.onclick=()=&gt;{if(d.dataset.done)return;d.dataset.done=1;answered++;if(ai===q[2]){score++;d.insertAdjacentHTML(&#x27;beforeend&#x27;,&#x27;&lt;div class=&quot;feedback ok&quot;&gt;✓ To‘g‘ri!&lt;/div&gt;&#x27;)}else d.insertAdjacentHTML(&#x27;beforeend&#x27;,&#x27;&lt;div class=&quot;feedback bad&quot;&gt;✗ Noto‘g‘ri. To‘g‘ri javob: &#x27;+q[1][q[2]]+&#x27;&lt;/div&gt;&#x27;);document.getElementById(&#x27;score&#x27;).textContent=&#x27;Natija: &#x27;+score+&#x27;/&#x27;+answered};d.appendChild(b)});qb.appendChild(d)});
+updateThermo();convert();drawHeat();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;"></iframe>
+    </section>
+    <section class="lesson" id="lesson-3">
+      <h2>4. Ideal gaz va uning qonunlari</h2>
+      <iframe title="4. Ideal gaz va uning qonunlari" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uz&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0&quot;&gt;
+&lt;title&gt;9-sinf Fizika — Ideal gaz&lt;/title&gt;
+&lt;style&gt;
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#eef4ff;color:#172033;line-height:1.6}
+.container{max-width:1000px;margin:auto;padding:18px}
+header{background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;text-align:center;padding:32px 20px;border-radius:20px;box-shadow:0 10px 30px #2563eb33;margin-bottom:22px}
+header h1{margin:0 0 8px;font-size:clamp(25px,5vw,38px)}
+.card{background:white;border-radius:18px;padding:24px;margin:20px 0;box-shadow:0 5px 20px #17203312}
+h2{color:#2563eb;margin-top:0;border-bottom:2px solid #e5e7eb;padding-bottom:10px}
+h3{color:#334155}
+.badge{display:inline-block;background:#dbeafe;color:#1d4ed8;padding:5px 12px;border-radius:20px;font-weight:bold}
+.sim{background:#0f172a;color:white;padding:18px;border-radius:15px;margin-top:18px}
+canvas{display:block;width:100%;max-width:760px;height:auto;background:#172033;border-radius:10px;margin:12px auto}
+.controls{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:12px 0}
+button{border:0;border-radius:9px;padding:10px 16px;background:#2563eb;color:white;font-weight:bold;cursor:pointer}
+button:hover{background:#1d4ed8}
+button.alt{background:#475569}
+input[type=range]{width:100%;accent-color:#60a5fa}
+.readout{display:flex;justify-content:space-around;flex-wrap:wrap;gap:10px;text-align:center}
+.readout div{background:#1e293b;border-radius:10px;padding:10px 18px;min-width:130px}
+.value{color:#60a5fa;font-size:20px;font-weight:bold}
+.formula{font-family:Consolas,monospace;background:#eff6ff;border-left:5px solid #2563eb;padding:13px;margin:12px 0;font-size:18px}
+.note{background:#f0fdf4;border-left:5px solid #22c55e;padding:12px;border-radius:7px}
+.question{background:#fff7ed;border-left:5px solid #f97316;padding:15px;border-radius:8px}
+.answer{display:none;color:#166534;font-weight:bold}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{padding:9px;border:1px solid #dbe2ea;text-align:left}
+th{background:#eff6ff}
+footer{text-align:center;color:#64748b;padding:25px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;container&quot;&gt;
+
+&lt;header&gt;
+&lt;h1&gt;9-sinf Fizika&lt;/h1&gt;
+&lt;h2 style=&quot;color:white;border:0&quot;&gt;Ideal gaz va uning qonunlari&lt;/h2&gt;
+&lt;p&gt;Interaktiv HTML5 dars • 3 ta reja • Simulyatsiya va animatsiyalar&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;!-- 1-REJA --&gt;
+&lt;section class=&quot;card&quot;&gt;
+&lt;span class=&quot;badge&quot;&gt;1-REJA&lt;/span&gt;
+&lt;h2&gt;Ideal gaz haqida tushuncha va uning asosiy xususiyatlari&lt;/h2&gt;
+
+&lt;p&gt;&lt;b&gt;Ideal gaz&lt;/b&gt; — molekulalarining o‘lchami ular orasidagi masofaga nisbatan juda kichik bo‘lgan va molekulalar orasidagi o‘zaro ta’sir to‘qnashuvlardan tashqari hisobga olinmaydigan gaz modelidir.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Molekulalar juda kichik moddiy nuqtalar deb qaraladi.&lt;/li&gt;
+&lt;li&gt;Molekulalar doimo tartibsiz harakatda bo‘ladi.&lt;/li&gt;
+&lt;li&gt;Molekulalar bir-biri va idish devori bilan to‘qnashadi.&lt;/li&gt;
+&lt;li&gt;To‘qnashuvlar elastik deb hisoblanadi.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;sim&quot;&gt;
+&lt;h3 style=&quot;color:#fff&quot;&gt;🔬 Simulyatsiya: gaz molekulalarining tartibsiz harakati&lt;/h3&gt;
+&lt;p style=&quot;text-align:center&quot;&gt;Harorat oshirilsa, molekulalar tezroq harakat qiladi.&lt;/p&gt;
+&lt;canvas id=&quot;gas&quot; width=&quot;760&quot; height=&quot;300&quot;&gt;&lt;/canvas&gt;
+&lt;div class=&quot;controls&quot;&gt;
+&lt;button onclick=&quot;heat()&quot;&gt;🔥 Haroratni oshirish&lt;/button&gt;
+&lt;button onclick=&quot;cool()&quot;&gt;❄️ Sovitish&lt;/button&gt;
+&lt;button class=&quot;alt&quot; onclick=&quot;resetGas()&quot;&gt;↻ Boshlang‘ich holat&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;readout&quot;&gt;
+&lt;div&gt;Harorat&lt;br&gt;&lt;span class=&quot;value&quot; id=&quot;t1&quot;&gt;20 °C&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;Tezlik&lt;br&gt;&lt;span class=&quot;value&quot; id=&quot;s1&quot;&gt;2.0&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;Molekulalar&lt;br&gt;&lt;span class=&quot;value&quot;&gt;40 ta&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;&lt;b&gt;Xulosa:&lt;/b&gt; Harorat oshishi molekulalarning o‘rtacha kinetik energiyasi va harakat tezligining ortishi bilan bog‘liq.&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- 2-REJA --&gt;
+&lt;section class=&quot;card&quot;&gt;
+&lt;span class=&quot;badge&quot;&gt;2-REJA&lt;/span&gt;
+&lt;h2&gt;Ideal gazning holat tenglamasi va gaz qonunlari&lt;/h2&gt;
+
+&lt;p&gt;Ideal gazning holati &lt;b&gt;bosim (p)&lt;/b&gt;, &lt;b&gt;hajm (V)&lt;/b&gt; va &lt;b&gt;absolyut harorat (T)&lt;/b&gt; bilan tavsiflanadi.&lt;/p&gt;
+&lt;div class=&quot;formula&quot;&gt;pV = (m/M)RT&lt;/div&gt;
+
+&lt;h3&gt;Asosiy gaz qonunlari&lt;/h3&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Qonun&lt;/th&gt;&lt;th&gt;O‘zgarmas kattalik&lt;/th&gt;&lt;th&gt;Tenglama&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Boyl-Mariott&lt;/td&gt;&lt;td&gt;T = const&lt;/td&gt;&lt;td&gt;p₁V₁ = p₂V₂&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Gey-Lyussak&lt;/td&gt;&lt;td&gt;p = const&lt;/td&gt;&lt;td&gt;V₁/T₁ = V₂/T₂&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Sharl&lt;/td&gt;&lt;td&gt;V = const&lt;/td&gt;&lt;td&gt;p₁/T₁ = p₂/T₂&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;sim&quot;&gt;
+&lt;h3 style=&quot;color:#fff&quot;&gt;🎛 Simulyatsiya: Izotermik jarayon (T = const)&lt;/h3&gt;
+&lt;p&gt;Hajmni o‘zgartiring. Harorat o‘zgarmas bo‘lganda hajm kamayishi bilan bosim ortadi.&lt;/p&gt;
+&lt;label&gt;Hajm: &lt;b id=&quot;v2&quot;&gt;100%&lt;/b&gt;&lt;/label&gt;
+&lt;input id=&quot;vol&quot; type=&quot;range&quot; min=&quot;50&quot; max=&quot;150&quot; value=&quot;100&quot;&gt;
+&lt;div class=&quot;readout&quot;&gt;
+&lt;div&gt;Bosim&lt;br&gt;&lt;span class=&quot;value&quot; id=&quot;p2&quot;&gt;1.00 atm&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;Harorat&lt;br&gt;&lt;span class=&quot;value&quot;&gt;const&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;canvas id=&quot;piston&quot; width=&quot;760&quot; height=&quot;220&quot;&gt;&lt;/canvas&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;sim&quot;&gt;
+&lt;h3 style=&quot;color:#fff&quot;&gt;🌡 Simulyatsiya: Harorat va bosim (V = const)&lt;/h3&gt;
+&lt;p&gt;Idish hajmi o‘zgarmaydi. Harorat oshirilganda bosim ortadi.&lt;/p&gt;
+&lt;label&gt;Harorat: &lt;b id=&quot;temp3&quot;&gt;300 K&lt;/b&gt;&lt;/label&gt;
+&lt;input id=&quot;tempRange&quot; type=&quot;range&quot; min=&quot;200&quot; max=&quot;600&quot; value=&quot;300&quot;&gt;
+&lt;div class=&quot;readout&quot;&gt;
+&lt;div&gt;Temperatura&lt;br&gt;&lt;span class=&quot;value&quot; id=&quot;tk&quot;&gt;300 K&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;Bosim&lt;br&gt;&lt;span class=&quot;value&quot; id=&quot;pk&quot;&gt;1.00 atm&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;canvas id=&quot;pressureCanvas&quot; width=&quot;760&quot; height=&quot;220&quot;&gt;&lt;/canvas&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- 3-REJA --&gt;
+&lt;section class=&quot;card&quot;&gt;
+&lt;span class=&quot;badge&quot;&gt;3-REJA&lt;/span&gt;
+&lt;h2&gt;Ideal gaz qonunlarining amaliy qo‘llanilishi va masalalar&lt;/h2&gt;
+
+&lt;p&gt;Gaz qonunlari kundalik hayotda va texnikada ko‘p uchraydi:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🚗 avtomobil shinalaridagi bosim;&lt;/li&gt;
+&lt;li&gt;🔥 issiqlik dvigatellari;&lt;/li&gt;
+&lt;li&gt;🧯 gaz ballonlari;&lt;/li&gt;
+&lt;li&gt;☁️ meteorologik kuzatuvlar;&lt;/li&gt;
+&lt;li&gt;❄️ sovutish qurilmalari va kompressorlar.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;sim&quot;&gt;
+&lt;h3 style=&quot;color:#fff&quot;&gt;🚗 Amaliy simulyatsiya: shina bosimi&lt;/h3&gt;
+&lt;p&gt;Harorat oshirilganda, hajm o‘zgarmas deb olsak, shina ichidagi bosim ham ortadi.&lt;/p&gt;
+&lt;label&gt;Harorat: &lt;b id=&quot;tireTemp&quot;&gt;20 °C&lt;/b&gt;&lt;/label&gt;
+&lt;input id=&quot;tire&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;60&quot; value=&quot;20&quot;&gt;
+&lt;canvas id=&quot;tireCanvas&quot; width=&quot;760&quot; height=&quot;230&quot;&gt;&lt;/canvas&gt;
+&lt;p style=&quot;text-align:center&quot;&gt;Bosim: &lt;span class=&quot;value&quot; id=&quot;tirePressure&quot;&gt;2.00 bar&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;question&quot;&gt;
+&lt;b&gt;🧮 Namuna masala&lt;/b&gt;
+&lt;p&gt;O‘zgarmas haroratda hajmi 4 litr bo‘lgan gazning bosimi 200 kPa. Hajm 2 litrgacha kamaytirilsa, yangi bosim qancha bo‘ladi?&lt;/p&gt;
+&lt;div class=&quot;formula&quot;&gt;p₁V₁ = p₂V₂&lt;/div&gt;
+&lt;p&gt;p₂ = (p₁V₁)/V₂ = (200 × 4)/2 = &lt;b&gt;400 kPa&lt;/b&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;question&quot;&gt;
+&lt;b&gt;💡 Interaktiv savol&lt;/b&gt;
+&lt;p&gt;Gaz hajmi 2 marta kamayib, harorat o‘zgarmasa, bosim qanday o‘zgaradi?&lt;/p&gt;
+&lt;button onclick=&quot;showAnswer()&quot;&gt;Javobni ko‘rsatish&lt;/button&gt;
+&lt;p id=&quot;answer&quot; class=&quot;answer&quot;&gt;Javob: bosim 2 marta ortadi, chunki pV = const.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;footer&gt;
+&lt;b&gt;9-sinf Fizika&lt;/b&gt; • Ideal gaz va uning qonunlari • Interaktiv HTML5 dars
+&lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+/* 1-SIMULYATSIYA: MOLEKULALAR */
+const gas=document.getElementById(&quot;gas&quot;),gx=gas.getContext(&quot;2d&quot;);
+let particles=[],gasSpeed=2,gasTemp=20;
+function makeParticles(){
+ particles=[];
+ for(let i=0;i&lt;40;i++){
+  let a=Math.random()*Math.PI*2;
+  particles.push({x:20+Math.random()*720,y:20+Math.random()*260,
+   vx:Math.cos(a)*gasSpeed*(.7+Math.random()*.7),
+   vy:Math.sin(a)*gasSpeed*(.7+Math.random()*.7),r:4});
+ }
+}
+makeParticles();
+function gasAnimation(){
+ gx.clearRect(0,0,760,300);
+ gx.strokeStyle=&quot;#475569&quot;;gx.strokeRect(1,1,758,298);
+ particles.forEach(p=&gt;{
+  p.x+=p.vx;p.y+=p.vy;
+  if(p.x&lt;5||p.x&gt;755)p.vx*=-1;
+  if(p.y&lt;5||p.y&gt;295)p.vy*=-1;
+  gx.beginPath();gx.arc(p.x,p.y,p.r,0,Math.PI*2);
+  gx.fillStyle=gasTemp&gt;50?&quot;#fb7185&quot;:&quot;#38bdf8&quot;;gx.fill();
+ });
+ requestAnimationFrame(gasAnimation);
+}
+gasAnimation();
+function changeGas(v,t){
+ gasSpeed=v;gasTemp=t;
+ particles.forEach(p=&gt;{
+  let a=Math.atan2(p.vy,p.vx),m=v*(.7+Math.random()*.7);
+  p.vx=Math.cos(a)*m;p.vy=Math.sin(a)*m;
+ });
+ document.getElementById(&quot;t1&quot;).textContent=t+&quot; °C&quot;;
+ document.getElementById(&quot;s1&quot;).textContent=v.toFixed(1);
+}
+function heat(){changeGas(5,80)}
+function cool(){changeGas(1,0)}
+function resetGas(){gasTemp=20;gasSpeed=2;makeParticles();changeGas(2,20)}
+
+/* 2A: PISTON */
+const vol=document.getElementById(&quot;vol&quot;);
+function drawPiston(v){
+ document.getElementById(&quot;v2&quot;).textContent=v+&quot;%&quot;;
+ document.getElementById(&quot;p2&quot;).textContent=(100/v).toFixed(2)+&quot; atm&quot;;
+ const c=document.getElementById(&quot;piston&quot;),x=c.getContext(&quot;2d&quot;);
+ x.clearRect(0,0,760,220);
+ x.strokeStyle=&quot;#94a3b8&quot;;x.lineWidth=5;x.strokeRect(80,35,600,130);
+ let w=600*v/150,px=80+w;
+ x.fillStyle=&quot;#38bdf8&quot;;x.fillRect(80,40,w,120);
+ x.fillStyle=&quot;#cbd5e1&quot;;x.fillRect(px-6,25,12,150);
+ x.fillStyle=&quot;#60a5fa&quot;;x.font=&quot;bold 18px Segoe UI&quot;;x.fillText(&quot;Gaz&quot;,100,100);
+ x.fillStyle=&quot;#e2e8f0&quot;;x.font=&quot;16px Segoe UI&quot;;x.fillText(&quot;Hajm o‘zgarmoqda&quot;,280,200);
+}
+vol.oninput=()=&gt;drawPiston(+vol.value);drawPiston(100);
+
+/* 2B: TEMPERATURE/PRESSURE */
+const tr=document.getElementById(&quot;tempRange&quot;);
+function drawPressure(T){
+ let p=T/300;
+ document.getElementById(&quot;temp3&quot;).textContent=T+&quot; K&quot;;
+ document.getElementById(&quot;tk&quot;).textContent=T+&quot; K&quot;;
+ document.getElementById(&quot;pk&quot;).textContent=p.toFixed(2)+&quot; atm&quot;;
+ const c=document.getElementById(&quot;pressureCanvas&quot;),x=c.getContext(&quot;2d&quot;);
+ x.clearRect(0,0,760,220);
+ x.fillStyle=&quot;#334155&quot;;x.fillRect(110,35,540,145);
+ let n=Math.min(45,Math.floor(20+T/15));
+ for(let i=0;i&lt;n;i++){
+  let px=120+Math.random()*520,py=45+Math.random()*125;
+  x.beginPath();x.arc(px,py,4,0,Math.PI*2);
+  x.fillStyle=T&gt;400?&quot;#fb7185&quot;:&quot;#38bdf8&quot;;x.fill();
+ }
+ x.fillStyle=&quot;#e2e8f0&quot;;x.font=&quot;16px Segoe UI&quot;;x.fillText(&quot;V = const&quot;,330,205);
+}
+tr.oninput=()=&gt;drawPressure(+tr.value);drawPressure(300);
+
+/* 3: TIRE */
+const tire=document.getElementById(&quot;tire&quot;);
+function drawTire(T){
+ let p=2*(273+T)/(273+20);
+ document.getElementById(&quot;tireTemp&quot;).textContent=T+&quot; °C&quot;;
+ document.getElementById(&quot;tirePressure&quot;).textContent=p.toFixed(2)+&quot; bar&quot;;
+ const c=document.getElementById(&quot;tireCanvas&quot;),x=c.getContext(&quot;2d&quot;);
+ x.clearRect(0,0,760,230);
+ x.beginPath();x.ellipse(380,115,230,82,0,0,Math.PI*2);
+ x.lineWidth=30;x.strokeStyle=&quot;#475569&quot;;x.stroke();
+ x.beginPath();x.ellipse(380,115,165,45,0,0,Math.PI*2);
+ x.fillStyle=&quot;#1e293b&quot;;x.fill();
+ x.fillStyle=&quot;#60a5fa&quot;;x.font=&quot;bold 20px Segoe UI&quot;;x.fillText(T&gt;40?&quot;Bosim oshmoqda&quot;:&quot;Bosim me’yorida&quot;,295,120);
+}
+tire.oninput=()=&gt;drawTire(+tire.value);drawTire(20);
+
+function showAnswer(){document.getElementById(&quot;answer&quot;).style.display=&quot;block&quot;;}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;"></iframe>
+    </section>
+    <section class="lesson" id="lesson-4">
+      <h2>5. Modda miqdori va Avogadro doimiysi</h2>
+      <iframe title="5. Modda miqdori va Avogadro doimiysi" srcdoc="&lt;!DOCTYPE html&gt;&lt;html lang=&quot;uz&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, viewport-fit=cover&quot;&gt;&lt;title&gt;Modda miqdori — 9-sinf fizika&lt;/title&gt;
+&lt;style&gt;
+:root{--bg:#eef3f1;--fg:#10302e;--card:#fff;--acc:#0f766e;--hot:#d97706;--mut:#4f6665;--bd:#c7d6d3;--ok:#15803d;--bad:#b91c1c;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=&quot;light&quot;]){--bg:#0c1917;--fg:#e3f1ee;--card:#142826;--acc:#2dd4bf;--hot:#fbbf24;--mut:#9ab8b3;--bd:#2a4744;--ok:#4ade80;--bad:#f87171}}
+:root[data-theme=&quot;dark&quot;]{--bg:#0c1917;--fg:#e3f1ee;--card:#142826;--acc:#2dd4bf;--hot:#fbbf24;--mut:#9ab8b3;--bd:#2a4744;--ok:#4ade80;--bad:#f87171}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.55 Georgia,&quot;Times New Roman&quot;,serif}
+main{max-width:760px;margin:auto;padding:14px}
+h1{font-size:1.6rem;margin:.2em 0}h2{font-size:1.35rem;margin:.3em 0}h3{font-size:1.1rem;margin:1em 0 .3em}
+.tabs{display:flex;gap:6px;margin:10px 0}.tab{flex:1;padding:12px 6px;font:inherit;font-size:.9rem;border:2px solid var(--bd);background:var(--card);color:var(--fg);border-radius:10px;cursor:pointer}
+.tab[aria-selected=true]{background:var(--acc);color:var(--bg);border-color:var(--acc)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px;margin:12px 0}
+canvas{width:100%;height:auto;display:block;background:var(--bg);border:1px solid var(--bd);border-radius:10px}
+button,select,input{font:inherit;font-size:1rem;color:var(--fg)}
+.b{padding:10px 14px;margin:4px 4px 4px 0;border:2px solid var(--acc);background:var(--card);border-radius:10px;cursor:pointer}
+.b.on,.b:active{background:var(--acc);color:var(--bg)}
+.q button{display:block;width:100%;text-align:left;margin:5px 0;padding:10px;border:2px solid var(--bd);background:var(--card);border-radius:10px;cursor:pointer}
+.q button.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 22%,var(--card))}.q button.bad{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 22%,var(--card))}
+input[type=range]{width:100%;accent-color:var(--acc)}input[type=text],select{padding:10px;border:2px solid var(--bd);border-radius:10px;background:var(--card);width:100%;margin:4px 0}
+.big{font-size:1.5rem;color:var(--acc);font-weight:bold}.mut{color:var(--mut);font-size:.9rem}.res{font-weight:bold}
+.step{padding:8px 10px;margin:6px 0;border-left:4px solid var(--acc);background:var(--bg);animation:in .5s}@keyframes in{from{opacity:0;transform:translateX(-14px)}}
+.msg{font-weight:bold;min-height:1.5em}[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){.step{animation:none}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;main&gt;
+&lt;h1&gt;Modda miqdori&lt;/h1&gt;&lt;div class=&quot;mut&quot;&gt;9-sinf fizika · molekulyar fizika asoslari&lt;/div&gt;
+&lt;div class=&quot;tabs&quot; role=&quot;tablist&quot;&gt;&lt;button class=&quot;tab&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;Modda tuzilishi&lt;/button&gt;&lt;button class=&quot;tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Avogadro doimiysi&lt;/button&gt;&lt;button class=&quot;tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Masalalar&lt;/button&gt;&lt;/div&gt;
+
+&lt;section class=&quot;sec&quot; id=&quot;s0&quot;&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h2&gt;Molekulyar-kinetik nazariya&lt;/h2&gt;
+&lt;p&gt;1) Barcha moddalar molekulalardan (atomlardan) iborat. 2) Molekulalar to&#x27;xtovsiz tartibsiz harakatlanadi. 3) Molekulalar bir-birini tortadi va itaradi.&lt;/p&gt;
+&lt;div id=&quot;st&quot;&gt;&lt;button class=&quot;b on&quot; data-m=&quot;0&quot;&gt;Qattiq jism&lt;/button&gt;&lt;button class=&quot;b&quot; data-m=&quot;1&quot;&gt;Suyuqlik&lt;/button&gt;&lt;button class=&quot;b&quot; data-m=&quot;2&quot;&gt;Gaz&lt;/button&gt;&lt;/div&gt;
+&lt;canvas id=&quot;c1&quot; width=&quot;600&quot; height=&quot;300&quot;&gt;&lt;/canvas&gt;
+&lt;label&gt;Harorat: &lt;b id=&quot;tv&quot;&gt;50&lt;/b&gt; °C&lt;input type=&quot;range&quot; id=&quot;T&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;50&quot;&gt;&lt;/label&gt;
+&lt;p class=&quot;mut&quot; id=&quot;stx&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Broun harakati&lt;/h3&gt;&lt;p&gt;Katta zarracha (to&#x27;q sariq) ko&#x27;rinmas molekulalarning urilishidan tartibsiz siljiydi. Harorat oshsa, harakat kuchayadi.&lt;/p&gt;&lt;canvas id=&quot;c2&quot; width=&quot;600&quot; height=&quot;300&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Nega «modda miqdori» kerak?&lt;/h3&gt;
+&lt;p&gt;1 sm³ suvda 3·10²² dan ortiq molekula bor. Ularni sanab bo&#x27;lmaydi. Shuning uchun zarrachalar sonini «to&#x27;plam» bilan o&#x27;lchaymiz.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Modda miqdori&lt;/b&gt; ν — moddadagi zarrachalar soni bilan bog&#x27;liq kattalik. Birligi: &lt;b&gt;mol&lt;/b&gt;. 1 mol — 6,02·10²³ ta zarracha.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;card q&quot; id=&quot;q0&quot;&gt;&lt;/div&gt;&lt;/section&gt;
+
+&lt;section class=&quot;sec&quot; id=&quot;s1&quot; hidden&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h2&gt;Avogadro doimiysi&lt;/h2&gt;
+&lt;p class=&quot;big&quot;&gt;Nₐ = 6,02·10²³ mol⁻¹&lt;/p&gt;&lt;p&gt;1 mol istalgan moddada shuncha zarracha bor. Modda tanlang va mol sonini o&#x27;zgartiring:&lt;/p&gt;
+&lt;select id=&quot;sub&quot;&gt;&lt;/select&gt;
+&lt;label&gt;Modda miqdori ν = &lt;b id=&quot;nv&quot;&gt;1&lt;/b&gt; mol&lt;input type=&quot;range&quot; id=&quot;nu&quot; min=&quot;0.1&quot; max=&quot;5&quot; step=&quot;0.1&quot; value=&quot;1&quot;&gt;&lt;/label&gt;
+&lt;canvas id=&quot;c3&quot; width=&quot;600&quot; height=&quot;220&quot;&gt;&lt;/canvas&gt;&lt;p class=&quot;mut&quot;&gt;Har bir nuqta ≈ 10²³ ta zarracha.&lt;/p&gt;
+&lt;div id=&quot;o2&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Teskari hisob: N → ν&lt;/h3&gt;&lt;label&gt;Zarrachalar soni (×10²³ birlikda):&lt;input type=&quot;text&quot; id=&quot;inv&quot; inputmode=&quot;decimal&quot; value=&quot;3,01&quot;&gt;&lt;/label&gt;&lt;div id=&quot;o3&quot; class=&quot;big&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Kattaliklarni his qiling&lt;/h3&gt;&lt;div id=&quot;cmp&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;card q&quot; id=&quot;q1&quot;&gt;&lt;/div&gt;&lt;/section&gt;
+
+&lt;section class=&quot;sec&quot; id=&quot;s2&quot; hidden&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h2&gt;Formulalar&lt;/h2&gt;
+&lt;p&gt;Formulani tanlang, uning shakllari ko&#x27;rinadi:&lt;/p&gt;
+&lt;div&gt;&lt;button class=&quot;b&quot; data-f=&quot;ν = N / Nₐ|N = ν · Nₐ|Nₐ = N / ν&quot;&gt;ν = N/Nₐ&lt;/button&gt;&lt;button class=&quot;b&quot; data-f=&quot;ν = m / M|m = ν · M|M = m / ν&quot;&gt;ν = m/M&lt;/button&gt;&lt;button class=&quot;b&quot; data-f=&quot;m₀ = M / Nₐ|M = m₀ · Nₐ|Nₐ = M / m₀&quot;&gt;m₀ = M/Nₐ&lt;/button&gt;&lt;/div&gt;
+&lt;div id=&quot;fo&quot; class=&quot;big&quot; style=&quot;line-height:1.8&quot;&gt;Formulani tanlang&lt;/div&gt;
+&lt;p class=&quot;mut&quot;&gt;Muhim: SI da m kg, M kg/mol da yoziladi. 18 g/mol = 0,018 kg/mol.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;h2&gt;Masala yechish&lt;/h2&gt;
+&lt;div&gt;&lt;button class=&quot;b&quot; id=&quot;pv&quot;&gt;◀&lt;/button&gt;&lt;b id=&quot;pn&quot;&gt;&lt;/b&gt;&lt;button class=&quot;b&quot; id=&quot;nx&quot;&gt;▶&lt;/button&gt;&lt;button class=&quot;b&quot; id=&quot;rd&quot;&gt;🎲 Yangi masala&lt;/button&gt;&lt;/div&gt;
+&lt;p id=&quot;pq&quot; style=&quot;font-weight:bold&quot;&gt;&lt;/p&gt;
+&lt;label&gt;Javobingiz (&lt;span id=&quot;pu&quot;&gt;&lt;/span&gt;):&lt;input type=&quot;text&quot; id=&quot;pa&quot; inputmode=&quot;decimal&quot; placeholder=&quot;masalan: 1,2e24&quot;&gt;&lt;/label&gt;
+&lt;button class=&quot;b&quot; id=&quot;ck&quot;&gt;Tekshirish&lt;/button&gt;&lt;button class=&quot;b&quot; id=&quot;sv&quot;&gt;Yechimni ko&#x27;rsat&lt;/button&gt;
+&lt;div class=&quot;msg&quot; id=&quot;pm&quot;&gt;&lt;/div&gt;&lt;div id=&quot;ps&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;card q&quot; id=&quot;q2&quot;&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;/main&gt;
+&lt;script&gt;
+const $=s=&gt;document.querySelector(s),NA=6.02e23,col=n=&gt;getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const sup=n=&gt;String(n).replace(/-/g,&#x27;⁻&#x27;).replace(/\d/g,d=&gt;&#x27;⁰¹²³⁴⁵⁶⁷⁸⁹&#x27;[d]);
+function f(x){if(!x)return&#x27;0&#x27;;const a=Math.abs(x);if(a&gt;=1e4||a&lt;1e-2){let e=Math.floor(Math.log10(a)),m=x/10**e;if(Math.abs(+m.toFixed(3))&gt;=10){m/=10;e++}return(+m.toFixed(3)+&#x27;&#x27;).replace(&#x27;.&#x27;,&#x27;,&#x27;)+&#x27;·10&#x27;+sup(e)}return(+x.toFixed(3)+&#x27;&#x27;).replace(&#x27;.&#x27;,&#x27;,&#x27;)}
+let act=0;const tabs=document.querySelectorAll(&#x27;.tab&#x27;);
+tabs.forEach((b,i)=&gt;b.onclick=()=&gt;{act=i;tabs.forEach((t,j)=&gt;t.setAttribute(&#x27;aria-selected&#x27;,i==j));document.querySelectorAll(&#x27;.sec&#x27;).forEach((s,j)=&gt;s.hidden=i!=j)});
+function quiz(id,Q){const el=$(id);let sc=0,an=0;el.innerHTML=&#x27;&lt;h3&gt;Test&lt;/h3&gt;&#x27;;const r=document.createElement(&#x27;p&#x27;);r.className=&#x27;res&#x27;;
+Q.forEach((q,i)=&gt;{const d=document.createElement(&#x27;div&#x27;);d.innerHTML=&#x27;&lt;p&gt;&lt;b&gt;&#x27;+(i+1)+&#x27;. &#x27;+q[0]+&#x27;&lt;/b&gt;&lt;/p&gt;&#x27;;
+q[1].forEach((o,j)=&gt;{const b=document.createElement(&#x27;button&#x27;);b.textContent=o;b.onclick=()=&gt;{if(d.done)return;d.done=1;an++;if(j==q[2]){sc++;b.classList.add(&#x27;ok&#x27;)}else{b.classList.add(&#x27;bad&#x27;);d.children[1+q[2]].classList.add(&#x27;ok&#x27;)}
+if(an==Q.length)r.textContent=&#x27;Natija: &#x27;+sc+&#x27;/&#x27;+Q.length+(sc==Q.length?&#x27; — ajoyib!&#x27;:&#x27; — mavzuni qayta ko\&#x27;rib chiqing&#x27;)};d.appendChild(b)});el.appendChild(d)});el.appendChild(r)}
+quiz(&#x27;#q0&#x27;,[[&#x27;Qaysi holatda molekulalar eng tartibli joylashgan?&#x27;,[&#x27;Gaz&#x27;,&#x27;Qattiq jism&#x27;,&#x27;Suyuqlik&#x27;],1],[&#x27;Harorat oshsa molekulalar tezligi…&#x27;,[&#x27;kamayadi&#x27;,&#x27;o\&#x27;zgarmaydi&#x27;,&#x27;ortadi&#x27;],2],[&#x27;Modda miqdorining birligi?&#x27;,[&#x27;kg&#x27;,&#x27;mol&#x27;,&#x27;dona&#x27;],1]]);
+quiz(&#x27;#q1&#x27;,[[&#x27;Avogadro doimiysi nimaga teng?&#x27;,[&#x27;6,02·10²³ mol⁻¹&#x27;,&#x27;6,02·10³² mol⁻¹&#x27;,&#x27;3,01·10²³ mol⁻¹&#x27;],0],[&#x27;3 mol moddada nechta zarracha bor?&#x27;,[&#x27;6,02·10²³&#x27;,&#x27;1,806·10²⁴&#x27;,&#x27;2,0·10²³&#x27;],1],[&#x27;Bitta molekula massasi formulasi?&#x27;,[&#x27;m₀ = M·Nₐ&#x27;,&#x27;m₀ = Nₐ/M&#x27;,&#x27;m₀ = M/Nₐ&#x27;],2]]);
+quiz(&#x27;#q2&#x27;,[[&#x27;0,9 kg suv (M = 0,018 kg/mol) necha mol?&#x27;,[&#x27;5&#x27;,&#x27;50&#x27;,&#x27;0,05&#x27;],1],[&#x27;ν = N/Nₐ dan N ni toping:&#x27;,[&#x27;N = ν·Nₐ&#x27;,&#x27;N = ν/Nₐ&#x27;,&#x27;N = Nₐ/ν&#x27;],0],[&#x27;1 mol CO₂ massasi?&#x27;,[&#x27;12 g&#x27;,&#x27;22 g&#x27;,&#x27;44 g&#x27;],2],[&#x27;Nₐ zarracha qancha modda miqdoriga mos?&#x27;,[&#x27;1 mol&#x27;,&#x27;1 kg&#x27;,&#x27;1 g&#x27;],0]]);
+/* 1-bo&#x27;lim animatsiya */
+const x1=$(&#x27;#c1&#x27;).getContext(&#x27;2d&#x27;),x2=$(&#x27;#c2&#x27;).getContext(&#x27;2d&#x27;);let mode=0,T=50;
+const txt=[&#x27;Qattiq jism: molekulalar tartibli joylashgan va muvozanat nuqtasi atrofida tebranadi.&#x27;,&#x27;Suyuqlik: molekulalar yaqin, lekin bir-biri yonidan sirpanib o\&#x27;tadi. Shakli yo\&#x27;q, hajmi bor.&#x27;,&#x27;Gaz: molekulalar uzoq va tez uchadi. Idishni to\&#x27;ldiradi.&#x27;];$(&#x27;#stx&#x27;).textContent=txt[0];
+const P=[...Array(48)].map((_,i)=&gt;({gx:45+i%8*72,gy:30+(i/8|0)*45,x:0,y:0,vx:Math.random()*2-1,vy:Math.random()*2-1,ph:Math.random()*6.3}));
+const B=[...Array(90)].map(()=&gt;{const a=Math.random()*6.3;return{x:Math.random()*600,y:Math.random()*300,vx:Math.cos(a),vy:Math.sin(a)}}),big={x:300,y:150,vx:0,vy:0,tr:[]};
+document.querySelectorAll(&#x27;#st .b&#x27;).forEach(b=&gt;b.onclick=()=&gt;{mode=+b.dataset.m;document.querySelectorAll(&#x27;#st .b&#x27;).forEach(o=&gt;o.classList.toggle(&#x27;on&#x27;,o==b));$(&#x27;#stx&#x27;).textContent=txt[mode]});
+$(&#x27;#T&#x27;).oninput=e=&gt;{T=+e.target.value;$(&#x27;#tv&#x27;).textContent=T};
+function draw1(t){x1.clearRect(0,0,600,300);x1.fillStyle=col(&#x27;--acc&#x27;);const s=(mode==1?.6:1.2)+T/30;
+P.forEach(p=&gt;{if(mode==0){const k=1+T/12,w=t*.004*(1+T/30);p.x=p.gx+Math.sin(w+p.ph)*k;p.y=p.gy+Math.cos(w*1.3+p.ph)*k}else{p.x+=p.vx*s;p.y+=p.vy*s;const y0=mode==1?110:0;if(p.x&lt;8||p.x&gt;592)p.vx*=-1;if(p.y&lt;y0+8||p.y&gt;292)p.vy*=-1;p.x=Math.min(592,Math.max(8,p.x));p.y=Math.min(292,Math.max(y0+8,p.y))}
+x1.beginPath();x1.arc(p.x,p.y,8,0,6.3);x1.fill()});if(mode==1){x1.strokeStyle=col(&#x27;--hot&#x27;);x1.beginPath();x1.moveTo(0,110);x1.lineTo(600,110);x1.stroke()}}
+function draw2(){x2.clearRect(0,0,600,300);const s=1.5+T/20;x2.fillStyle=col(&#x27;--mut&#x27;);
+B.forEach(p=&gt;{p.x+=p.vx*s;p.y+=p.vy*s;if(p.x&lt;3||p.x&gt;597)p.vx*=-1;if(p.y&lt;3||p.y&gt;297)p.vy*=-1;const dx=big.x-p.x,dy=big.y-p.y,d=Math.hypot(dx,dy);
+if(d&lt;19){const nx=dx/d,ny=dy/d;big.vx+=nx*.35;big.vy+=ny*.35;p.vx=-nx;p.vy=-ny;p.x=big.x-nx*20;p.y=big.y-ny*20}x2.beginPath();x2.arc(p.x,p.y,3,0,6.3);x2.fill()});
+big.vx*=.97;big.vy*=.97;big.x+=big.vx;big.y+=big.vy;if(big.x&lt;20||big.x&gt;580){big.vx*=-1;big.x=Math.min(580,Math.max(20,big.x))}if(big.y&lt;20||big.y&gt;280){big.vy*=-1;big.y=Math.min(280,Math.max(20,big.y))}
+big.tr.push([big.x,big.y]);if(big.tr.length&gt;250)big.tr.shift();x2.strokeStyle=col(&#x27;--hot&#x27;);x2.beginPath();big.tr.forEach((q,i)=&gt;i?x2.lineTo(q[0],q[1]):x2.moveTo(q[0],q[1]));x2.stroke();x2.fillStyle=col(&#x27;--hot&#x27;);x2.beginPath();x2.arc(big.x,big.y,16,0,6.3);x2.fill()}
+/* 2-bo&#x27;lim */
+const S=[{n:&#x27;suv&#x27;,f:&#x27;H₂O&#x27;,M:18,u:&#x27;molekula&#x27;,c:&#x27;#3b82f6&#x27;},{n:&#x27;temir&#x27;,f:&#x27;Fe&#x27;,M:56,u:&#x27;atom&#x27;,c:&#x27;#ef4444&#x27;},{n:&#x27;kislorod&#x27;,f:&#x27;O₂&#x27;,M:32,u:&#x27;molekula&#x27;,c:&#x27;#14b8a6&#x27;},{n:&#x27;alyuminiy&#x27;,f:&#x27;Al&#x27;,M:27,u:&#x27;atom&#x27;,c:&#x27;#a3a3a3&#x27;}];
+S.forEach((s,i)=&gt;$(&#x27;#sub&#x27;).add(new Option(s.n+&#x27; (&#x27;+s.f+&#x27;, M = &#x27;+s.M+&#x27; g/mol)&#x27;,i)));
+const x3=$(&#x27;#c3&#x27;).getContext(&#x27;2d&#x27;),D=[...Array(31)].map(()=&gt;({x:Math.random()*560+20,y:Math.random()*180+20,ph:Math.random()*6.3}));
+function upd2(){const s=S[$(&#x27;#sub&#x27;).value],v=+$(&#x27;#nu&#x27;).value,N=v*NA;$(&#x27;#nv&#x27;).textContent=String(v).replace(&#x27;.&#x27;,&#x27;,&#x27;);
+$(&#x27;#o2&#x27;).innerHTML=&#x27;&lt;p&gt;Zarrachalar soni: N = ν·Nₐ = &lt;span class=&quot;big&quot;&gt;&#x27;+f(N)+&#x27;&lt;/span&gt; ta &#x27;+s.u+&#x27;&lt;/p&gt;&lt;p&gt;Massa: m = ν·M = &#x27;+f(v*s.M)+&#x27; g = &#x27;+f(v*s.M/1000)+&#x27; kg&lt;/p&gt;&lt;p&gt;Bitta &#x27;+s.u+&#x27; massasi: m₀ = M/Nₐ = &#x27;+f(s.M/1000/NA)+&#x27; kg&lt;/p&gt;&#x27;;
+$(&#x27;#cmp&#x27;).innerHTML=&#x27;&lt;p&gt;• Yer aholisi ≈ 8·10⁹. Bu &#x27;+f(N)+&#x27; sonidan &lt;b&gt;&#x27;+f(N/8e9)+&#x27;&lt;/b&gt; marta kichik.&lt;/p&gt;&lt;p&gt;• Atom o\&#x27;lchami ≈ 10⁻¹⁰ m. &#x27;+f(N)+&#x27; ta atomni qator qilsak, uzunligi &#x27;+f(N*1e-10)+&#x27; m bo\&#x27;ladi. Quyoshgacha masofa 1,5·10¹¹ m.&lt;/p&gt;&lt;p&gt;• Bitta &#x27;+s.u+&#x27; massasi &#x27;+f(s.M/1000/NA)+&#x27; kg. U qum donasidan (≈ 10⁻⁵ kg) juda yengil.&lt;/p&gt;&#x27;}
+function inv(){const v=parseFloat($(&#x27;#inv&#x27;).value.replace(&#x27;,&#x27;,&#x27;.&#x27;));$(&#x27;#o3&#x27;).innerHTML=isNaN(v)?&#x27;Son kiriting&#x27;:&#x27;ν = N/Nₐ = &#x27;+f(v*1e23/NA)+&#x27; mol&#x27;}
+$(&#x27;#sub&#x27;).onchange=$(&#x27;#nu&#x27;).oninput=upd2;$(&#x27;#inv&#x27;).oninput=inv;upd2();inv();
+function draw3(t){x3.clearRect(0,0,600,220);x3.fillStyle=S[$(&#x27;#sub&#x27;).value].c;const k=Math.round(+$(&#x27;#nu&#x27;).value*6.02);for(let i=0;i&lt;k;i++){const d=D[i];x3.beginPath();x3.arc(d.x+Math.sin(t*.002+d.ph)*6,d.y+Math.cos(t*.0025+d.ph)*6,9,0,6.3);x3.fill()}}
+/* 3-bo&#x27;lim */
+document.querySelectorAll(&#x27;[data-f]&#x27;).forEach(b=&gt;b.onclick=()=&gt;{$(&#x27;#fo&#x27;).innerHTML=b.dataset.f.split(&#x27;|&#x27;).join(&#x27;&lt;br&gt;&#x27;)});
+function pr(q,g,fo,ca,a,u){return{q,a,u,st:[&#x27;Berilgan: &#x27;+g,&#x27;Formula: &#x27;+fo,&#x27;Hisoblash: &#x27;+ca,&#x27;Javob: &#x27;+f(a)+&#x27; &#x27;+u]}}
+const PR=[pr(&#x27;2 mol suvda nechta molekula bor?&#x27;,&#x27;ν = 2 mol; Nₐ = 6,02·10²³ mol⁻¹&#x27;,&#x27;N = ν·Nₐ&#x27;,&#x27;N = 2 · 6,02·10²³ = 1,204·10²⁴&#x27;,2*NA,&#x27;dona&#x27;),
+pr(&#x27;3,01·10²³ ta molekula necha mol moddani tashkil etadi?&#x27;,&#x27;N = 3,01·10²³; Nₐ = 6,02·10²³ mol⁻¹&#x27;,&#x27;ν = N/Nₐ&#x27;,&#x27;ν = 3,01·10²³ / 6,02·10²³ = 0,5&#x27;,.5,&#x27;mol&#x27;),
+pr(&#x27;36 g suv (M = 18 g/mol) necha mol?&#x27;,&#x27;m = 36 g = 0,036 kg (SI ga o\&#x27;tkazdik!); M = 0,018 kg/mol&#x27;,&#x27;ν = m/M&#x27;,&#x27;ν = 0,036 / 0,018 = 2&#x27;,2,&#x27;mol&#x27;),
+pr(&#x27;88 g CO₂ (M = 44 g/mol) necha mol?&#x27;,&#x27;m = 88 g = 0,088 kg (SI!); M = 0,044 kg/mol&#x27;,&#x27;ν = m/M&#x27;,&#x27;ν = 0,088 / 0,044 = 2&#x27;,2,&#x27;mol&#x27;),
+pr(&#x27;0,5 mol alyuminiy (M = 27 g/mol) massasi necha gramm?&#x27;,&#x27;ν = 0,5 mol; M = 27 g/mol = 0,027 kg/mol&#x27;,&#x27;m = ν·M&#x27;,&#x27;m = 0,5 · 0,027 = 0,0135 kg = 13,5 g&#x27;,13.5,&#x27;g&#x27;),
+pr(&#x27;0,5 kg temir (M = 56 g/mol) necha mol?&#x27;,&#x27;m = 0,5 kg; M = 56 g/mol = 0,056 kg/mol (SI!)&#x27;,&#x27;ν = m/M&#x27;,&#x27;ν = 0,5 / 0,056 ≈ 8,93&#x27;,.5/.056,&#x27;mol&#x27;),
+pr(&#x27;Kislorod (M = 32 g/mol) bitta molekulasining massasi necha kg?&#x27;,&#x27;M = 32 g/mol = 0,032 kg/mol; Nₐ = 6,02·10²³ mol⁻¹&#x27;,&#x27;m₀ = M/Nₐ&#x27;,&#x27;m₀ = 0,032 / 6,02·10²³ ≈ 5,32·10⁻²⁶&#x27;,.032/NA,&#x27;kg&#x27;),
+pr(&#x27;54 g alyuminiyda (M = 27 g/mol) nechta atom bor?&#x27;,&#x27;m = 54 g = 0,054 kg; M = 0,027 kg/mol&#x27;,&#x27;ν = m/M = 2 mol, keyin N = ν·Nₐ&#x27;,&#x27;N = 2 · 6,02·10²³ = 1,204·10²⁴&#x27;,2*NA,&#x27;dona&#x27;)];
+let pi=0,cur=PR[0];
+function show(p,label){cur=p;$(&#x27;#pn&#x27;).textContent=&#x27; &#x27;+label+&#x27; &#x27;;$(&#x27;#pq&#x27;).textContent=p.q;$(&#x27;#pu&#x27;).textContent=p.u;$(&#x27;#pa&#x27;).value=&#x27;&#x27;;$(&#x27;#pm&#x27;).textContent=&#x27;&#x27;;$(&#x27;#ps&#x27;).innerHTML=&#x27;&#x27;}
+function go(d){pi=(pi+d+PR.length)%PR.length;show(PR[pi],(pi+1)+&#x27;/&#x27;+PR.length)}
+$(&#x27;#pv&#x27;).onclick=()=&gt;go(-1);$(&#x27;#nx&#x27;).onclick=()=&gt;go(1);
+$(&#x27;#rd&#x27;).onclick=()=&gt;{const s=S[Math.random()*4|0],t=Math.random()*3|0,k=1+Math.random()*5|0,h=k/2;let p;
+if(t==0)p=pr(k+&#x27; mol &#x27;+s.n+&#x27;da (&#x27;+s.f+&#x27;) nechta &#x27;+s.u+&#x27; bor?&#x27;,&#x27;ν = &#x27;+k+&#x27; mol; Nₐ = 6,02·10²³ mol⁻¹&#x27;,&#x27;N = ν·Nₐ&#x27;,&#x27;N = &#x27;+k+&#x27; · 6,02·10²³ = &#x27;+f(k*NA),k*NA,&#x27;dona&#x27;);
+else if(t==1)p=pr(f(s.M*h)+&#x27; g &#x27;+s.n+&#x27; (&#x27;+s.f+&#x27;, M = &#x27;+s.M+&#x27; g/mol) necha mol?&#x27;,&#x27;m = &#x27;+f(s.M*h)+&#x27; g = &#x27;+f(s.M*h/1000)+&#x27; kg (SI!); M = &#x27;+f(s.M/1000)+&#x27; kg/mol&#x27;,&#x27;ν = m/M&#x27;,&#x27;ν = &#x27;+f(s.M*h/1000)+&#x27; / &#x27;+f(s.M/1000)+&#x27; = &#x27;+f(h),h,&#x27;mol&#x27;);
+else p=pr(f(h*NA)+&#x27; ta &#x27;+s.u+&#x27; (&#x27;+s.n+&#x27;) necha mol?&#x27;,&#x27;N = &#x27;+f(h*NA)+&#x27;; Nₐ = 6,02·10²³ mol⁻¹&#x27;,&#x27;ν = N/Nₐ&#x27;,&#x27;ν = &#x27;+f(h*NA)+&#x27; / 6,02·10²³ = &#x27;+f(h),h,&#x27;mol&#x27;);show(p,&#x27;yangi&#x27;)};
+$(&#x27;#ck&#x27;).onclick=()=&gt;{const v=parseFloat($(&#x27;#pa&#x27;).value.replace(&#x27;,&#x27;,&#x27;.&#x27;).replace(/\s/g,&#x27;&#x27;).replace(/[·*x×]10\^?/,&#x27;e&#x27;));const m=$(&#x27;#pm&#x27;);
+if(isNaN(v)){m.style.color=col(&#x27;--bad&#x27;);m.textContent=&#x27;Son kiriting (masalan 1,2e24)&#x27;;return}
+if(Math.abs(v-cur.a)&lt;=.02*Math.abs(cur.a)){m.style.color=col(&#x27;--ok&#x27;);m.textContent=&#x27;To\&#x27;g\&#x27;ri! ✔&#x27;}else{m.style.color=col(&#x27;--bad&#x27;);m.textContent=&#x27;Xato. Birliklarni (g → kg) va formulani tekshiring.&#x27;}};
+$(&#x27;#sv&#x27;).onclick=()=&gt;{const box=$(&#x27;#ps&#x27;);box.innerHTML=&#x27;&#x27;;cur.st.forEach((s,i)=&gt;setTimeout(()=&gt;{const d=document.createElement(&#x27;div&#x27;);d.className=&#x27;step&#x27;;d.textContent=s;box.appendChild(d)},i*700))};
+go(0);pi=0;show(PR[0],&#x27;1/&#x27;+PR.length);
+(function loop(t){if(act==0){draw1(t);draw2()}else if(act==1)draw3(t);requestAnimationFrame(loop)})(0);
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+"></iframe>
+    </section>
+</main>
+
+<footer>
+  9-sinf fizika • Interaktiv HTML5 dars materiallari
+</footer>
+
+<script>
+function go(i){
+  const el=document.getElementById('lesson-'+i);
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+const lessons=[...document.querySelectorAll('.lesson')];
+const buttons=[...document.querySelectorAll('nav button')];
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const i=lessons.indexOf(e.target);
+      buttons.forEach((b,j)=>b.classList.toggle('active',j===i));
+    }
+  });
+},{rootMargin:'-20% 0px -65% 0px',threshold:0});
+lessons.forEach(x=>obs.observe(x));
+</script>
+</body>
+</html>
